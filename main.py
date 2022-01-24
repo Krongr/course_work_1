@@ -67,7 +67,9 @@ if __name__ == "__main__":
     vk_user = VkUser(get_token_from_file('vk_token.txt'))
     ya_disk_user = YaDiskUser(get_token_from_file('ya_disk_token.txt'))
 
+    owner_name = input("Введите ID или имя владельца фотографий: ")
+    count = input("Сколько фотографий необходимо сохранить?: ")
 
     creat_backups_for_vk_photos_on_ya_disk(
-        'begemot_korovin', 'profile', vk_user, ya_disk_user
+        owner_name, 'profile', vk_user, ya_disk_user, count=count
     )
